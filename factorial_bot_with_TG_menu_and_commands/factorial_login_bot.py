@@ -16,6 +16,10 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+your_email = "stinkysocks@socks.socks"
+your_password = "TEST123"
+
+
 instructions = "Instructions:\n\n" \
         "Login: Login you into Factorial\n" \
         "Clockin: Start your Shift\n" \
@@ -82,9 +86,9 @@ def function(text):
             if Email_Field:
                 action = ActionChains(driver)
                 Email_Field.click()
-                action.send_keys("tobias.rubenbauer@clusterosl.com").perform()
+                action.send_keys(your_email).perform()
                 Password_Field.click()
-                action.send_keys("Redbull1975!!").perform()
+                action.send_keys(your_password).perform()
                 Remember_Me_Field.click()
                 submit_button.click()
                 time.sleep(3)
